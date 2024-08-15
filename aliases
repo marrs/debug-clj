@@ -1,0 +1,2 @@
+alias build="clj -T:build jar"
+alias clean="clj -T:build clean"
