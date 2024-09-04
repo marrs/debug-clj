@@ -15,3 +15,11 @@
   [& colls]
   (knitter [] colls))
 
+(defn truncate
+  "Truncate string x if it is longer than len.
+  It will not truncate it by that amount."
+  [len x]
+  (let [xlen (count (str x))]
+    (if (< len xlen)
+      (str (subs (str x) 0 len) "...")
+      (str x))))
